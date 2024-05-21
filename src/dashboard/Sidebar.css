@@ -1,0 +1,15 @@
+.container {
+    width: 210px; /* Set the desired width */
+    /* border: 1px solid black; */
+    padding: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  .container p {
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Ensures any overflow is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
+    margin: 0; /* Optional: to reset default margin/padding */
+    padding: 0; /* Optional: to reset default margin/padding */
+  }
+  
