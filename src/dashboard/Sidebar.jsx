@@ -5,6 +5,7 @@ import userImg from "../assets/profile.jpg"
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import "./Sidebar.css"
+import SidebarLogo from './SidebarLogo';
 
 const SideBar = () => {
 
@@ -14,13 +15,15 @@ const SideBar = () => {
 
   return (
     <Sidebar aria-label="Sidebar with content separator example">
-        <Sidebar.Logo href="#" img={user?.photoURL} imgAlt="Flowbite logo" className="w-16 h-16">
-        <div className="container">
-      <p>{user?.displayName || "Demo User"}</p>
-    </div>
-        </Sidebar.Logo>
+        <div className="sidebar m-4">
+            <SidebarLogo href="#" img={user?.photoURL} imgAlt="User Photo" displayName={user?.displayName} />
+            {/* Other sidebar content */}
+        </div>
         <Sidebar.Items>
         <Sidebar.ItemGroup>
+          <Sidebar.Item href="/" icon={HiUser}>
+            Home
+          </Sidebar.Item>
           <Sidebar.Item href="/admin/dashboard" icon={HiChartPie}>
             Dashboard
           </Sidebar.Item>
@@ -30,10 +33,7 @@ const SideBar = () => {
           <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
             Manage Books
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiUser}>
-            Users
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiShoppingBag}>
+          <Sidebar.Item href="/shop" icon={HiShoppingBag}>
             Products
           </Sidebar.Item>
           <Sidebar.Item href="/login" icon={HiArrowSmRight}>
@@ -43,7 +43,7 @@ const SideBar = () => {
             Log Out
           </Sidebar.Item>
         </Sidebar.ItemGroup>
-        <Sidebar.ItemGroup>
+        {/* <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={HiChartPie}>
             Upgrade to Pro
           </Sidebar.Item>
@@ -53,7 +53,7 @@ const SideBar = () => {
           <Sidebar.Item href="#" icon={HiSupport}>
             Help
           </Sidebar.Item>
-        </Sidebar.ItemGroup>
+        </Sidebar.ItemGroup> */}
       </Sidebar.Items>
     </Sidebar>
   )
