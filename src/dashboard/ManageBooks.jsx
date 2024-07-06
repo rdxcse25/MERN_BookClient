@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from "flowbite-react";
 import { Link } from 'react-router-dom';
+import { BASE_URL } from '../../helper';
 
 const ManageBooks = () => {
 
@@ -28,7 +29,7 @@ const ManageBooks = () => {
   const handleDelete = (id) => {
     console.log(id);
   
-    fetch(`http://localhost:5000/book/${id}`, {
+    fetch(`${BASE_URL}/book/${id}`, {
       method: "DELETE",
     })
     .then(res => {
