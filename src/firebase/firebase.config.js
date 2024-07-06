@@ -9,13 +9,6 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey: "AIzaSyDsNdWIn8f6janJThz2IRQNbXV_ERJsIA8",
-  // authDomain: "mern-book-inventory-fbfa3.firebaseapp.com",
-  // projectId: "mern-book-inventory-fbfa3",
-  // storageBucket: "mern-book-inventory-fbfa3.appspot.com",
-  // messagingSenderId: "175457722977",
-  // appId: "1:175457722977:web:b624dd4bf057ebc03f0020"
-
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
